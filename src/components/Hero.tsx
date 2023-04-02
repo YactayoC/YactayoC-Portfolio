@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="grid items-center w-full grid-cols-2 justify-items-center mt-28 ">
+    <div className="grid items-center w-full grid-cols-2 mt-48  justify-items-center">
       <div className="flex flex-col items-start text-gray-50 gap-y-12">
         <div>
           <h1 className="text-5xl font-black">Sebastian Yactayo</h1>
@@ -11,28 +11,25 @@ export default function Hero() {
             Frontend Developer
           </h3>
         </div>
-        <p className="text-xl w-[30rem]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          laoreet laoreet justo, quis lacinia tortor malesuada acoreet laoreet
-          justo oreet laoreet justo.
+        <p className="text-xl w-[30rem] leading-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas laoreet laoreet justo, quis lacinia tortor
+          malesuada acoreet laoreet justo oreet laoreet justo.
         </p>
-        <button className="px-8 py-2 font-bold rounded-lg button-cus">
-          Download CV
-        </button>
+        <button className="button-custom">Download CV</button>
       </div>
       <div className="relative">
         <Image
           alt="profile"
-          src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1680450531/Group_1_m9eurr.png"
+          src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1680455160/profile_kakqcs.png"
           width={350}
-          height={390}
+          height={405}
         />
         <Link href="#" className="absolute top-0 -right-16 animate-pulse">
           <Image
             alt="Linkedin"
             src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659586588/portfolio/Icons/linkedin_sntgoj.png"
             width={50}
-            height={500}
+            height={50}
           />
         </Link>
         <Link href="#" className="absolute bottom-0 -right-16 animate-pulse">
@@ -40,18 +37,15 @@ export default function Hero() {
             alt="Twitter"
             src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659586588/portfolio/Icons/twitter_zo7piv.png"
             width={50}
-            height={500}
+            height={50}
           />
         </Link>
-        <Link
-          href="#"
-          className="absolute top-0 bottom-0 flex items-center -left-16 animate-pulse"
-        >
+        <Link href="#" className="absolute top-0 bottom-0 flex items-center -left-16 animate-pulse">
           <Image
             alt="Github"
             src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659586588/portfolio/Icons/github_rrg1nf.png"
             width={50}
-            height={500}
+            height={50}
           />
         </Link>
       </div>

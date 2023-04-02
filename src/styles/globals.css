@@ -4,27 +4,55 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #101630;
   font-family: "Roboto", sans-serif;
   padding-inline: 4rem;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #101630;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #3c7ef5;
+  border-radius: 100vh;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #2758b3;
+}
+
 @layer components {
   .nav-link {
-    @apply text-gray-50 text-base font-bold px-8 py-2 rounded-lg;
+    @apply px-8 py-2 text-base font-bold rounded-lg text-gray-50 cursor-pointer;
   }
 
   .nav-link:hover {
-    @apply bg-gradient-to-r hover:from-blue-500 hover:to-indigo-600 duration-300;
+    @apply duration-300 bg-button_hover;
   }
 
-  .button-nav-active,
-  .button-cus {
-    @apply bg-gradient-to-r from-blue-500 to-indigo-600 duration-300;
+  .nav-link-active {
+    @apply bg-button_hover;
   }
 
-  .button-cus:hover {
-    @apply shadow-lg shadow-indigo-600/80 duration-300;
+  .button-custom {
+    @apply px-8 py-2 font-bold duration-300 border-2 rounded-lg border-button bg-button;
+  }
+
+  .button-custom:hover {
+    @apply hover:border-button_hover hover:bg-transparent;
   }
 }

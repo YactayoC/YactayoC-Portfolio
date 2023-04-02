@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        button: "#3b82f6",
+        button_hover: "#4f46e5",
+      },
       keyframes: {
         move: {
           "0%": { top: "0px", left: "0px" },
