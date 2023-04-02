@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { About, Hero, Navbar } from "@/components";
+import Head from 'next/head';
+import { About, Hero, Navbar, Skills } from '@/components';
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       </header>
 
       <About />
+      <Skills />
     </>
   );
 }

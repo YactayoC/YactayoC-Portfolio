@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 * {
   scroll-behavior: smooth;
@@ -10,7 +10,7 @@
 
 body {
   background-color: #101630;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding-inline: 4rem;
 }
 
@@ -36,8 +36,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @layer components {
+  /* Nav */
   .nav-link {
-    @apply px-8 py-2 text-base font-bold rounded-lg text-gray-50 cursor-pointer;
+    @apply px-8 py-2 text-base font-bold rounded-lg cursor-pointer text-gray-50;
   }
 
   .nav-link:hover {
@@ -48,11 +49,25 @@ body::-webkit-scrollbar-thumb:hover {
     @apply bg-button_hover;
   }
 
+  /* Button */
   .button-custom {
     @apply px-8 py-2 font-bold duration-300 border-2 rounded-lg border-button bg-button;
   }
 
   .button-custom:hover {
     @apply hover:border-button_hover hover:bg-transparent;
+  }
+
+  /* Tab */
+  .tab {
+    @apply w-full pb-2 text-center;
+  }
+
+  .tab-active {
+    @apply font-bold;
+  }
+
+  .tab-active::after {
+    @apply block w-full mx-auto mt-2 ease-in-out bg-gray-50 content-[''] h-1 animate-fade-in-tab;
   }
 }

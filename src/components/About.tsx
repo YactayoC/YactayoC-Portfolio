@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -13,17 +13,16 @@ export default function About() {
             height="250"
           />
         </div>
-        <div className="text-xl font-medium text-gray-50  w-[35rem] leading-8">
+        <div className="text-xl font-medium text-gray-50 w-[35rem] leading-8">
           <p>
-            👋 Hello, I am a web developer, I like to make web pages in addition
-            to applying good practices for the development of these, I also like
-            to learn new technologies and find different ways to solve some kind
-            of problem.
+            👋 Hello, I am a web developer, I like to make web pages in addition to applying good practices for the
+            development of these, I also like to learn new technologies and find different ways to solve some kind of
+            problem.
           </p>
           <br />
           <p>
-            👨‍💻 As for my skills, I am responsible, I adapt to changes and I have
-            good communication when working in a team.
+            👨‍💻 As for my skills, I am responsible, I adapt to changes and I have good communication when working in a
+            team.
           </p>
         </div>
         <div></div>
