@@ -9,20 +9,20 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      Roboto: ['Roboto', 'sans-serif'],
+    },
     extend: {
       colors: {
         button: '#3b82f6',
         button_hover: '#4f46e5',
+        background: '#101630',
+        background_secondary: '#4740bd',
+      },
+      boxShadow: {
+        'icons-project': '0px 0px 0px 2px white',
       },
       keyframes: {
-        move: {
-          '0%': { top: '0px', left: '0px' },
-          '25%': { top: '0px', left: '200px' },
-          '50%': { top: '200px', left: '200px' },
-          '75%': { top: '200px', left: '0px' },
-          '100%': { top: '0px', left: '0px' },
-        },
-
         fadeInTab: {
           '0%': { width: '0%', opacity: '0' },
           '100%': { width: '100%', opacity: '1' },
@@ -30,7 +30,6 @@ module.exports = {
       },
 
       animation: {
-        'move-icon': 'move 5s ease-in-out infinite',
         'fade-in-tab': 'fadeInTab 0.3s ease-in-out',
       },
     },

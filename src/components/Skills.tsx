@@ -10,11 +10,11 @@ export default function Skills() {
   };
 
   return (
-    <section className="flex flex-col mt-36 gap-y-16" id="skills">
+    <section className="flex flex-col container-section mt-36 gap-y-16" id="skills">
       <h2 className="text-4xl font-bold text-center text-gray-50">Skills</h2>
 
       {/* Skills */}
-      <div className="flex flex-col gap-y-16 w-[70rem] m-auto cursor-pointer font-medium">
+      <div className="flex flex-col w-full m-auto font-medium gap-y-16 lg:w-[80%]">
         <div className="flex justify-between text-gray-50">
           <div className={`tab ${indexCategory === 0 && 'tab-active'}`} onClick={() => onClickCategory(0)}>
             Frontend
@@ -30,7 +30,7 @@ export default function Skills() {
           </div>
         </div>
 
-        <div className="grid grid-cols-5 justify-items-center gap-y-10">
+        <div className="grid grid-cols-3 md:grid-cols-5 justify-items-center gap-y-10">
           <figure className="relative flex flex-col items-center content-center w-full h-20 overflow-hidden group gap-y-2">
             <picture className="w-16 h-16 duration-300 ease-in-out group-hover:w-10 group-hover:h-10">
               <Image

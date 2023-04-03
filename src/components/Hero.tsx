@@ -3,15 +3,15 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="grid items-center w-full grid-cols-2 mt-48  justify-items-center">
-      <div className="flex flex-col items-start text-gray-50 gap-y-12">
+    <div className="grid items-center w-full grid-cols-1 gap-8 mt-32 md:mt-48 lg:grid gap-y-12 lg:grid-cols-2 lg:gap-y-0 justify-items-center">
+      <div className="flex flex-col items-start pl-4 text-gray-50 gap-y-12">
         <div>
-          <h1 className="text-5xl font-black">Sebastian Yactayo</h1>
-          <h3 className="text-3xl font-bold text-transparent duration-300 text-gradient-to bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-600">
+          <h1 className="text-4xl font-black md:text-5xl">Sebastian Yactayo</h1>
+          <h3 className="text-2xl font-bold text-transparent duration-300 md:text-3xl text-gradient-to bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-600">
             Frontend Developer
           </h3>
         </div>
-        <p className="text-xl w-[30rem] leading-8">
+        <p className="text-xl lg:w-[30rem] leading-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas laoreet laoreet justo, quis lacinia tortor
           malesuada acoreet laoreet justo oreet laoreet justo.
         </p>
@@ -19,34 +19,33 @@ export default function Hero() {
       </div>
       <div className="relative">
         <Image
+          priority
           alt="profile"
           src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1680455160/profile_kakqcs.png"
-          width={350}
+          width={330}
           height={405}
+          className="w-[330px] h-[405px]"
         />
-        <Link href="#" className="absolute top-0 -right-16 animate-pulse">
-          <Image
-            alt="Linkedin"
-            src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659586588/portfolio/Icons/linkedin_sntgoj.png"
-            width={50}
-            height={50}
-          />
+        <Link
+          href="https://www.linkedin.com/in/sebastianyactayocrisostomo"
+          target="_blank"
+          className="absolute left-36 -bottom-16 lg:top-0 lg:left-auto lg:bottom-auto lg:-right-16 animate-pulse"
+        >
+          <Image alt="Linkedin" src="/assets/icons/linkedin.svg" width={50} height={50} />
         </Link>
-        <Link href="#" className="absolute bottom-0 -right-16 animate-pulse">
-          <Image
-            alt="Twitter"
-            src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659586588/portfolio/Icons/twitter_zo7piv.png"
-            width={50}
-            height={50}
-          />
+        <Link
+          href="https://twitter.com/yactayo_aron"
+          target="_blank"
+          className="absolute right-0 -bottom-16 lg:bottom-0 lg:-right-16 animate-pulse"
+        >
+          <Image alt="Twitter" src="/assets/icons/twitter.svg" width={50} height={50} />
         </Link>
-        <Link href="#" className="absolute top-0 bottom-0 flex items-center -left-16 animate-pulse">
-          <Image
-            alt="Github"
-            src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659586588/portfolio/Icons/github_rrg1nf.png"
-            width={50}
-            height={50}
-          />
+        <Link
+          href="https://github.com/YactayoC"
+          target="_blank"
+          className="absolute left-0 m-auto lg:flex lg:bottom-0 lg:items-center -bottom-16 lg:top-0 lg:h-fit lg:-left-16 animate-pulse"
+        >
+          <Image alt="Github" src="/assets/icons/github.svg" width={50} height={50} />
         </Link>
       </div>
     </div>

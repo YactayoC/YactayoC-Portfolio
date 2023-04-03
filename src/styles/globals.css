@@ -1,73 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-
-* {
-  scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth !important;
 }
-
-body {
-  background-color: #101630;
-  font-family: 'Roboto', sans-serif;
-  padding-inline: 4rem;
-}
-
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 10px;
-  height: 5px;
-}
-
-body::-webkit-scrollbar-track {
-  border-radius: 100vh;
-  background: #101630;
   height: 10px;
 }
 
-body::-webkit-scrollbar-thumb {
-  background: #3c7ef5;
-  border-radius: 100vh;
-  height: 10px;
+*::-webkit-scrollbar-track {
+  @apply bg-background;
 }
 
-body::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 100vh;
+}
+
+*::-webkit-scrollbar-thumb:hover {
   background: #2758b3;
 }
 
-@layer components {
-  /* Nav */
-  .nav-link {
-    @apply px-8 py-2 text-base font-bold rounded-lg cursor-pointer text-gray-50;
-  }
+body {
+  @apply bg-background font-Roboto;
+}
 
-  .nav-link:hover {
-    @apply duration-300 bg-button_hover;
-  }
+section {
+  width: 80%;
+  margin: 0 auto;
+}
 
-  .nav-link-active {
-    @apply bg-button_hover;
-  }
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
 
-  /* Button */
-  .button-custom {
-    @apply px-8 py-2 font-bold duration-300 border-2 rounded-lg border-button bg-button;
-  }
+.nav-link {
+  @apply px-8 py-2 text-base font-bold rounded-lg cursor-pointer text-gray-50;
+}
 
-  .button-custom:hover {
-    @apply hover:border-button_hover hover:bg-transparent;
-  }
+.nav-link:hover {
+  @apply duration-300 bg-button_hover;
+}
 
-  /* Tab */
-  .tab {
-    @apply w-full pb-2 text-center;
-  }
+.nav-link-active {
+  @apply bg-button_hover;
+}
 
-  .tab-active {
-    @apply font-bold;
-  }
+.nav-link-mobile {
+  @apply px-8 py-2 text-base font-bold rounded-lg cursor-pointer text-gray-50;
+}
 
-  .tab-active::after {
-    @apply block w-full mx-auto mt-2 ease-in-out bg-gray-50 content-[''] h-1 animate-fade-in-tab;
-  }
+.button-custom {
+  @apply px-8 py-2 font-bold duration-300 border-2 rounded-lg border-button bg-button;
+}
+
+.button-custom:hover {
+  @apply hover:border-button_hover hover:bg-transparent;
+}
+
+.tab {
+  @apply w-full pb-2 text-center cursor-pointer;
+}
+
+.tab-active {
+  @apply font-bold;
+}
+
+.tab-active::after {
+  @apply block w-full mx-auto mt-2 ease-in-out bg-gray-50 content-[''] h-1 animate-fade-in-tab;
+}
+
+.input-text,
+.input-message {
+  @apply w-full px-4 py-2 text-base font-bold border-2 rounded-lg outline-none border-gray-50 bg-background text-gray-50;
+}
+
+.input-message {
+  @apply h-32 resize-none;
+}
+
+.container-section {
+  @apply w-[90%];
 }
