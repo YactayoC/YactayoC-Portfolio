@@ -4,4 +4,5 @@ export { default as Navbar } from './Navbar';
 export { default as Presentation } from './Presentation';
 export { default as Project } from './Project';
 export { default as Projects } from './Projects';
+export { default as Skill } from './Skill';
 export { default as Skills } from './Skills';

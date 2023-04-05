@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Image from 'next/image';
 
 import { dataSkills } from '@/data';
+import Skill from './Skill';
 
 export default function Skills() {
   const [skillsCategory, setSkillsCategory] = useState({ index: 0, category: 'frontend' });
@@ -47,38 +47,8 @@ export default function Skills() {
           {dataSkills
             .filter((skill) => skill.category === skillsCategory.category)
             .map((skill, index) => (
-              <figure
-                key={index}
-                className="relative flex flex-col items-center content-center w-full h-20 overflow-hidden group gap-y-2"
-              >
-                <picture className="w-16 h-16 duration-300 ease-in-out group-hover:w-10 group-hover:h-10">
-                  <Image
-                    className="object-cover object-center"
-                    src={skill.image}
-                    alt={skill.name}
-                    width={60}
-                    height={60}
-                  />
-                </picture>
-                <figcaption className="absolute text-center duration-300 ease-in-out group-hover:bottom-2 text-gray-50 -bottom-10">
-                  {skill.name}
-                </figcaption>
-              </figure>
+              <Skill key={index} index={index} skill={skill} />
             ))}
-          {/* <figure className="relative flex flex-col items-center content-center w-full h-20 overflow-hidden group gap-y-2">
-            <picture className="w-16 h-16 duration-300 ease-in-out group-hover:w-10 group-hover:h-10">
-              <Image
-                className="object-cover object-center"
-                src="https://res.cloudinary.com/sebas-2001-yac/image/upload/v1662226893/portfolio/Icons/typescript_hvpgz0.png"
-                alt="Skills"
-                width={60}
-                height={60}
-              />
-            </picture>
-            <figcaption className="absolute text-center duration-300 ease-in-out group-hover:bottom-2 text-gray-50 -bottom-10">
-              TypeScript
-            </figcaption>
-          </figure> */}
         </div>
       </div>
     </section>
