@@ -34,7 +34,9 @@ export default function Project({ project }: Props) {
         </div>
 
         <div className="flex items-center justify-between px-8 py-2">
-          <span className="text-lg font-bold text-gray-50">{project.title}</span>
+          <Link href={`./projects/${project.title}`}>
+            <span className="text-lg font-bold text-gray-50">{project.title}</span>
+          </Link>
           <div className="flex items-center gap-4">
             <Link
               as={project.repository}

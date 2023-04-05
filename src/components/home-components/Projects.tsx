@@ -1,4 +1,5 @@
 import { dataProjects } from '@/data';
+import Link from 'next/link';
 import Project from '../Project';
 
 export default function Projects() {
@@ -13,7 +14,10 @@ export default function Projects() {
             <Project key={project.id} project={project}></Project>
           ))}
       </div>
-      <button className="m-auto text-gray-50 button-custom w-fit">View all projects</button>
+
+      <Link href="./projects">
+        <button className="m-auto button-custom w-fit">View all projects</button>
+      </Link>
     </section>
   );
 }

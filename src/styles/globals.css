@@ -64,6 +64,12 @@ body {
   @apply z-10 scale-105 bg-transparent;
 }
 
+.input-select-custom {
+  @apply bg-black border-none rounded-t-lg px-8 py-3 text-white text-lg font-bold outline-none;
+  box-shadow: 10px 0px 15px #3b82f6, 0px 0px 20px #22d3ee, -10px 0px 25px #4f46e5;
+  border-right: 15px solid transparent;
+}
+
 @keyframes glowing {
   0% {
     background-position: 0 0;
