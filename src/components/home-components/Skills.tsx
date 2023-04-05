@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { dataSkills } from '@/data';
-import Skill from './Skill';
+import Skill from '../Skill';
 
 export default function Skills() {
   const [skillsCategory, setSkillsCategory] = useState({ index: 0, category: 'frontend' });

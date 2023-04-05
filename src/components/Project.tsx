@@ -27,6 +27,7 @@ export default function Project({ project }: Props) {
                 alt="Image project"
                 width={640}
                 height={360}
+                priority
               />
             </div>
           ))}
@@ -36,13 +37,21 @@ export default function Project({ project }: Props) {
           <span className="text-lg font-bold text-gray-50">{project.title}</span>
           <div className="flex items-center gap-4">
             <Link
+              as={project.repository}
+              passHref
               href={project.repository}
               target="_blank"
               className="p-1 duration-300 rounded-lg hover:shadow-icons-project"
             >
               <Image alt="Github" src="/assets/icons/github-project.svg" width={30} height={30} />
             </Link>
-            <Link href={project.url} target="_blank" className="p-1 duration-300 rounded-lg hover:shadow-icons-project">
+            <Link
+              as={project.url}
+              passHref
+              href={project.url}
+              target="_blank"
+              className="p-1 duration-300 rounded-lg hover:shadow-icons-project"
+            >
               <Image alt="Github" src="/assets/icons/link-project.svg" width={30} height={30} />
             </Link>
           </div>

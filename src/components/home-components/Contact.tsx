@@ -8,7 +8,13 @@ export default function Contact() {
     >
       <h2 className="text-6xl font-bold text-gradient-2">Contact</h2>
       <div className="flex flex-col items-center justify-center w-full p-6 gap-y-20 lg:flex-row lg:gap-x-20">
-        <Image className="hidden lg:block" src="/assets/images/contact.svg" alt="contact" width={537} height={464} />
+        <Image
+          className="hidden lg:block w-[537px] h-[464px]"
+          src="/assets/images/contact.svg"
+          alt="contact"
+          width={537}
+          height={464}
+        />
         <form className="flex flex-col items-center w-full transition-all duration-300 md:w-96 gap-y-8">
           <input className="input-text" type="text" placeholder="FullName" />
           <input className="input-text" type="text" placeholder="Email" />
