@@ -15,9 +15,8 @@ module.exports = {
     extend: {
       colors: {
         button: '#3b82f6',
-        button_hover: '#4f46e5',
-        background: '#101630',
-        background_secondary: '#4740bd',
+        background_primary: '#101630',
+        background_secondary: '#16204c',
       },
       boxShadow: {
         'icons-project': '0px 0px 0px 2px white',
@@ -27,10 +26,16 @@ module.exports = {
           '0%': { width: '0%', opacity: '0' },
           '100%': { width: '100%', opacity: '1' },
         },
+        glowingButton: {
+          '0%': { 'background-position': '0 0' },
+          '50%': { 'background-position': '400% 0' },
+          '100%': { 'background-position': '0 0' },
+        },
       },
 
       animation: {
         'fade-in-tab': 'fadeInTab 0.3s ease-in-out',
+        'glowing-button': 'glowingButton 50s linear infinite',
       },
     },
   },

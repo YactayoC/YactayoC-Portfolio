@@ -3,11 +3,14 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="grid items-center w-full grid-cols-1 gap-8 mt-32 md:mt-48 lg:grid gap-y-12 lg:grid-cols-2 lg:gap-y-0 justify-items-center">
+    <div
+      className="grid items-center w-full grid-cols-1 gap-8 mt-32 md:mt-48 lg:grid gap-y-12 lg:grid-cols-2 lg:gap-y-0 justify-items-center"
+      id="presentation"
+    >
       <div className="flex flex-col items-start pl-4 text-gray-50 gap-y-12">
         <div>
-          <h1 className="text-4xl font-black md:text-5xl">Sebastian Yactayo</h1>
-          <h3 className="text-2xl font-bold text-transparent duration-300 md:text-3xl text-gradient-to bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-600">
+          <h1 className="text-4xl font-black sm:text-5xl md:text-6xl">Sebastian Yactayo</h1>
+          <h3 className="text-3xl font-bold duration-300 sm:text-4xl text-blue-shadow w-fit md:text-4xl text-gradient-1">
             Frontend Developer
           </h3>
         </div>
