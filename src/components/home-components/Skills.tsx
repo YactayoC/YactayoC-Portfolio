@@ -43,11 +43,11 @@ export default function Skills() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-5 justify-items-center gap-y-10">
+        <div className="grid grid-cols-3 md:grid-cols-5 justify-items-center gap-y-20">
           {dataSkills
             .filter((skill) => skill.category === skillsCategory.category)
             .map((skill, index) => (
-              <Skill key={index} index={index} skill={skill} />
+              <Skill key={index} skill={skill} />
             ))}
         </div>
       </div>

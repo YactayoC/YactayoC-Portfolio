@@ -407,8 +407,8 @@ export const dataProjects: ProjectI[] = [
         category: 'frontend'
       },
       {
-        name: 'Redux',
-        image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1660184946/portfolio/Icons/redux_reawoa.png',
+        name: 'Jotai',
+        image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1660185445/portfolio/Icons/jotai_zfwldc.png',
         category: 'frontend'
       },
       {
