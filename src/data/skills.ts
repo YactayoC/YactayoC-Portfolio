@@ -98,7 +98,6 @@ export const dataSkills: SkillI[] = [
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659640450/portfolio/Icons/mysql_qtcblp.png',
     category: 'database',
   },
-
   {
     name: 'Git',
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1668220330/portfolio/Icons/gith_k0wq6u.png',
