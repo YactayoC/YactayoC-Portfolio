@@ -1,6 +1,6 @@
-import { ProjectI } from '@/models';
+import { Project } from '@/models';
 
-export const dataProjects: ProjectI[] = [
+export const dataProjects: Project[] = [
   {
     id: 1,
     title: 'TODO List',

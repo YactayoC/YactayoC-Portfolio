@@ -1,4 +1,4 @@
-import { SkillI } from '@/models';
+import { Skill as SkillI } from '@/models';
 import Image from 'next/image';
 
 interface Props {

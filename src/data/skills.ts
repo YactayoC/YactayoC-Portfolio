@@ -1,6 +1,6 @@
-import { SkillI } from '@/models';
+import { Skill } from '@/models';
 
-export const dataSkills: SkillI[] = [
+export const dataSkills: Skill[] = [
   {
     name: 'HTML',
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659633663/portfolio/Icons/html_1_e9aolg.png',

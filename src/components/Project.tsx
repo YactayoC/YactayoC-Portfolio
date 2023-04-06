@@ -3,7 +3,7 @@ import Link from 'next/link';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
-import { ProjectI } from '@/models';
+import { Project as ProjectI } from '@/models';
 import { emblaOptionsNoDrag, emblaOptionsDrag } from '@/utils';
 
 interface Props {

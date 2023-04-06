@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import { ToastContainer } from 'react-toastify';
 
 import { isEmail, isName } from '@/utils/validations';
 import { useForm } from 'react-hook-form';
+import { notify, sendEmail } from '@/utils';
 
-interface DataContact {
+interface DataForm {
   fullname: string;
   email: string;
   message: string;
@@ -15,10 +17,14 @@ export default function Contact() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<DataContact>();
+  } = useForm<DataForm>();
 
-  const onSendEmail = (data: DataContact) => {
-    console.log(data);
+  const onSendEmail = async (data: DataForm) => {
+    const { fullname, email, message } = data;
+
+    await sendEmail({ fullname, email, message })
+      .then(() => notify('Email sent successfully'))
+      .catch(() => notify('Error sending email'));
     reset();
   };
 
@@ -27,6 +33,17 @@ export default function Contact() {
       className="flex flex-col py-8 mt-36 items-center w-full gap-y-16 rounded-t-[5rem] md:rounded-t-[10rem]"
       id="contact"
     >
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <h2 className="text-6xl font-bold text-gradient-2">Contact Me</h2>
       <div className="flex flex-col items-center justify-center w-full p-6 gap-y-20 lg:flex-row lg:gap-x-20">
         <Image
@@ -37,7 +54,7 @@ export default function Contact() {
           height={464}
         />
         <form
-          className="flex flex-col items-center w-full transition-all duration-300 md:w-96 gap-y-8"
+          className="flex flex-col items-center w-full transition-all duration-300 md:w-96 gap-y-10"
           onSubmit={handleSubmit(onSendEmail)}
         >
           <div className="relative flex flex-col w-full ">
@@ -55,6 +72,7 @@ export default function Contact() {
             <label htmlFor="fullname" className="label-input">
               Fullname
             </label>
+            {errors.fullname && <p className="absolute text-red-500 -bottom-6">{errors.fullname.message}</p>}
           </div>
           <div className="relative flex flex-col w-full ">
             <input
@@ -70,6 +88,7 @@ export default function Contact() {
             <label htmlFor="email" className="label-input">
               Email
             </label>
+            {errors.email && <p className="absolute text-red-500 -bottom-6">{errors.email.message}</p>}
           </div>
           <div className="relative flex flex-col w-full ">
             <textarea
@@ -85,6 +104,7 @@ export default function Contact() {
             <label htmlFor="message" className="label-input">
               Message
             </label>
+            {errors.message && <p className="absolute text-red-500 -bottom-6">{errors.message.message}</p>}
           </div>
           <button className="w-full button-custom">Send mail</button>
         </form>

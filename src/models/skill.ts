@@ -1,4 +1,4 @@
-export interface SkillI {
+export interface Skill {
   name: string;
   image: string;
   category: string;

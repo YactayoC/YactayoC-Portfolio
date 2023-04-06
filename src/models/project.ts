@@ -1,8 +1,8 @@
-export interface ProjectI {
+export interface Project {
   id: number;
   title: string;
   images: string[];
-  technologies: TechnologyI[];
+  technologies: Technology[];
   repository: string;
   video: string;
   url: string;
@@ -12,7 +12,7 @@ export interface ProjectI {
   description_es: string;
 }
 
-interface TechnologyI {
+interface Technology {
   name: string;
   image: string;
   category: string;
