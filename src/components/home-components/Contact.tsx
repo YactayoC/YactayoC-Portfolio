@@ -16,9 +16,24 @@ export default function Contact() {
           height={464}
         />
         <form className="flex flex-col items-center w-full transition-all duration-300 md:w-96 gap-y-8">
-          <input className="input-text" type="text" placeholder="FullName" />
-          <input className="input-text" type="text" placeholder="Email" />
-          <textarea className="input-message" placeholder="Message"></textarea>
+          <div className="relative flex flex-col w-full ">
+            <input id="fullname" className="input-text peer" type="text" placeholder=" " />
+            <label htmlFor="fullname" className="label-input">
+              Fullname
+            </label>
+          </div>
+          <div className="relative flex flex-col w-full ">
+            <input id="email" className="input-text peer" type="email" placeholder=" " />
+            <label htmlFor="email" className="label-input">
+              Email
+            </label>
+          </div>
+          <div className="relative flex flex-col w-full ">
+            <textarea id="message" className="input-message peer" placeholder=" "></textarea>
+            <label htmlFor="message" className="label-input">
+              Message
+            </label>
+          </div>
           <button className="w-full button-custom">Send mail</button>
         </form>
       </div>

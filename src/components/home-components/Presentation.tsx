@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Typewriter } from 'react-simple-typewriter';
 
 export default function Hero() {
   return (
@@ -11,12 +12,17 @@ export default function Hero() {
         <div>
           <h1 className="text-4xl font-black sm:text-5xl md:text-6xl">Sebastian Yactayo</h1>
           <h3 className="text-3xl font-bold duration-300 sm:text-4xl text-blue-shadow w-fit md:text-4xl text-gradient-1">
-            Frontend Developer
+            <Typewriter
+              words={['Frontend Developer', 'Backend Developer']}
+              loop
+              cursor
+              cursorColor="#305db7"
+              typeSpeed={125}
+            />
           </h3>
         </div>
-        <p className="text-xl lg:w-[30rem] leading-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas laoreet laoreet justo, quis lacinia tortor
-          malesuada acoreet laoreet justo oreet laoreet justo.
+        <p className="text-xl lg:w-[30rem] leading-8 italic font-medium">
+          &ldquo;To learn is to grow, and to grow is to become a better version of oneself&ldquo;
         </p>
         <button className="button-custom">Download CV</button>
       </div>

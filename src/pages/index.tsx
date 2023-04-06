@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>YactayoC</title>
+        <title>Sebastian Yactayo | Portfolio</title>
       </Head>
       <header>
         <Navbar />

@@ -21,7 +21,10 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 z-50 flex flex-row items-center w-full px-16 py-8 backdrop-blur-lg bg-slate-400/5">
-      <Link href="#presentation" className="absolute w-16 h-16 cursor-pointer left-4 md:left-auto md:h-20 md:w-20">
+      <Link
+        href="#presentation"
+        className="absolute w-16 h-16 cursor-none sm:cursor-pointer left-4 md:left-auto md:h-20 md:w-20"
+      >
         <Image src="/assets/logo.png" alt="logo" width={80} height={80} />
       </Link>
 
@@ -58,7 +61,7 @@ export default function Navbar() {
       </div>
 
       {/* Hamburguer */}
-      <div className="absolute cursor-pointer right-4 md:hidden" onClick={onClickHamburguer}>
+      <div className="absolute cursor-none sm:cursor-pointer right-4 md:hidden" onClick={onClickHamburguer}>
         <Image src="/assets/menu.svg" alt="github" width={35} height={35} />
       </div>
 

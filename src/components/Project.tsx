@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 import { ProjectI } from '@/models';
 import { emblaOptionsNoDrag, emblaOptionsDrag } from '@/utils';
@@ -24,14 +24,25 @@ export default function Project({ project, showLinks = true, dragFree = false }:
         <div className=" embla__container">
           {slides.map((index: number) => (
             <div className="p-2 embla__slide" key={index}>
-              <Image
-                className="w-full embla__slide__img rounded-xl"
-                src={project?.images[index]}
-                alt="Image project"
-                width={640}
-                height={360}
-                priority
-              />
+              {dragFree ? (
+                <Image
+                  className="w-full h-full embla__slide__img rounded-xl"
+                  src={project?.images[index]}
+                  alt="Image project"
+                  width={1599}
+                  height={899}
+                  priority
+                />
+              ) : (
+                <Image
+                  className="w-full h-full embla__slide__img rounded-xl"
+                  src={project?.images[index]}
+                  alt="Image project"
+                  width={640}
+                  height={360}
+                  priority
+                />
+              )}
             </div>
           ))}
         </div>

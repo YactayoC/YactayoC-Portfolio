@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +7,13 @@
 /* All */
 html {
   scroll-behavior: smooth !important;
-  scroll-padding-top: 12rem !important;
+  scroll-padding-top: 5rem !important;
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: 12rem !important;
+  }
 }
 
 *::-webkit-scrollbar {
@@ -39,6 +45,7 @@ body {
 
 .embla__container {
   display: flex;
+  align-items: flex-start;
 }
 
 .embla__slide {
@@ -52,7 +59,7 @@ body {
 }
 
 .button-custom {
-  @apply relative px-8 py-3 text-lg font-bold text-white transition-transform duration-100 bg-black border-none rounded-lg;
+  @apply relative px-8 py-3 text-lg font-bold text-white transition-transform duration-100 bg-black border-none rounded-lg sm:cursor-pointer cursor-none;
 }
 
 .button-custom::before {
@@ -65,7 +72,7 @@ body {
 }
 
 .input-select-custom {
-  @apply bg-black border-none rounded-t-lg px-8 py-3 text-white text-lg font-bold outline-none;
+  @apply px-8 py-3 text-lg font-bold text-white bg-black border-none rounded-t-lg outline-none;
   box-shadow: 10px 0px 15px #3b82f6, 0px 0px 20px #22d3ee, -10px 0px 25px #4f46e5;
   border-right: 15px solid transparent;
 }
@@ -100,23 +107,15 @@ body {
 }
 
 .nav-link-mobile {
-  @apply w-1/2 px-8 py-2 text-base font-bold text-center rounded-lg cursor-pointer text-gray-50;
+  @apply w-1/2 px-8 py-2 text-base font-bold text-center rounded-lg cursor-none sm:cursor-pointer text-gray-50;
 }
 
 .nav-link-mobile:hover {
   @apply duration-300 bg-button;
 }
 
-/* .button-custom {
-  @apply px-8 py-2 font-bold duration-300 border-2 rounded-lg border-button bg-button;
-}
-
-.button-custom:hover {
-  @apply hover:border-button_hover hover:bg-transparent;
-} */
-
 .tab {
-  @apply w-full pb-2 text-center cursor-pointer;
+  @apply w-full pb-2 text-center cursor-none sm:cursor-pointer;
 }
 
 .tab-active {
@@ -129,11 +128,23 @@ body {
 
 .input-text,
 .input-message {
-  @apply w-full px-4 py-2 text-base font-bold border-2 rounded-lg outline-none border-gray-50 bg-background_primary text-gray-50;
+  @apply w-full px-4 py-4 text-lg font-bold bg-transparent border-2 rounded-lg outline-none border-gray-50 text-gray-50;
 }
 
 .input-message {
   @apply h-32 resize-none;
+}
+
+.label-input {
+  @apply absolute top-0 transition-transform duration-500 translate-y-4 text-lg cursor-none sm:cursor-pointer text-gray-50 left-3 peer-focus:-translate-y-3 peer-focus:scale-[0.8] peer-focus:-translate-x-2 bg-background_primary px-2 peer-placeholder-shown:text-gray-50;
+}
+
+.input-text:not(:placeholder-shown) + label {
+  @apply -translate-x-2 scale-[0.8] -translate-y-3;
+}
+
+.input-message:not(:placeholder-shown) + label {
+  @apply -translate-x-2 scale-[0.8] -translate-y-3;
 }
 
 .text-gradient-1 {

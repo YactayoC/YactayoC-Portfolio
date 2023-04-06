@@ -6,7 +6,6 @@ export const emblaOptionsDrag: EmblaOptionsType = {
   loop: true,
   speed: 10,
   align: 1,
-  inViewThreshold: 0,
-  dragFree: true
+  dragFree: true,
 };
 // export const emblaPlugin = Autoplay({ delay: 2000, stopOnInteraction: false });
