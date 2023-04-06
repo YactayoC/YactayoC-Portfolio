@@ -12,7 +12,7 @@ export default function Skills() {
 
   return (
     <section className="flex flex-col items-center container-section mt-36 gap-y-16" id="skills">
-      <h2 className="text-6xl font-bold text-gradient-2">Skills</h2>
+      <h2 className="text-6xl font-bold text-gradient-2">My Skills</h2>
 
       {/* Skills */}
       <div className="flex flex-col w-full m-auto font-medium gap-y-16 lg:w-[70%]">

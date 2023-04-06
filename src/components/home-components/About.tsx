@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function About() {
   return (
     <section className="flex flex-col items-center container-section mt-52 md:mt-36 gap-y-16" id="about">
-      <h2 className="text-6xl font-bold text-gradient-2">About me</h2>
+      <h2 className="text-6xl font-bold text-gradient-2">About Me</h2>
       <div className="flex flex-col items-center grid-rows-2 m-auto gap-y-8 lg:grid lg:grid-cols-2 lg:grid-rows-none gap-x-16 justify-items-center lg:w-[80%]">
         <Image
           className="sm:w-[85%] sm:h-[85%] sm:block hidden"
