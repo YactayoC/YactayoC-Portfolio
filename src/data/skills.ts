@@ -47,7 +47,7 @@ export const dataSkills: SkillI[] = [
     category: 'frontend',
   },
   {
-    name: 'Styled Components',
+    name: 'Styled C.',
     image:
       'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1660697248/portfolio/Icons/styled-components_q4zash.png',
     category: 'frontend',
@@ -61,6 +61,11 @@ export const dataSkills: SkillI[] = [
   {
     name: 'Redux',
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1660184946/portfolio/Icons/redux_reawoa.png',
+    category: 'frontend',
+  },
+  {
+    name: 'VueX',
+    image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1680794751/portfolio/Icons/vuex_1_qnmuqp.png',
     category: 'frontend',
   },
   {
