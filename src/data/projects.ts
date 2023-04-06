@@ -105,7 +105,7 @@ export const dataProjects: ProjectI[] = [
     video:
       'https://res.cloudinary.com/sebas-2001-yac/video/upload/v1659745673/portfolio/Videos/2022-08-05_19-24-42_ga3xmx.mp4',
     url: 'https://curious-beijinho-ac8e5d.netlify.app/',
-    salient: true,
+    salient: false,
     category: 'external',
     description_en:
       'Pokedex is a project which collects pokemon through an external API, in this case in the main page it generates pokemon randomly and also has a page to search for pokemon. ',
