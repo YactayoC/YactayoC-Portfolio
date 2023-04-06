@@ -16,7 +16,7 @@ export default function Skill({ skill, widthCustom }: Props) {
       <picture className="w-16 h-16 duration-300 ease-in-out group-hover:w-10 group-hover:h-10">
         <Image className="object-cover object-center" src={skill.image} alt={skill.name} width={65} height={65} />
       </picture>
-      <figcaption className="absolute text-center duration-300 ease-in-out group-hover:bottom-1 text-gray-50 -bottom-8">
+      <figcaption className="absolute text-center duration-300 ease-in-out group-hover:-bottom-1 text-gray-50 -bottom-8">
         {skill.name}
       </figcaption>
     </figure>
