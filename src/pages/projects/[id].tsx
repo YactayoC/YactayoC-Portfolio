@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 import { dataProjects } from '@/data';
-import { ProjectI } from '@/models';
+import { Project as ProjectI } from '@/models';
 import { Project, Skill } from '@/components';
 
 export default function ProjectPage() {
