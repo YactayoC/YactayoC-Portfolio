@@ -85,7 +85,7 @@ export const dataSkills: Skill[] = [
   },
   {
     name: 'Express',
-    image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659640786/portfolio/Icons/Express_afb7ac.png',
+    image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1680825918/portfolio/Icons/express.png',
     category: 'backend',
   },
   {
