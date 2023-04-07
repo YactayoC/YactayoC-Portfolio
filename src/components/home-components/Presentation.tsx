@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Typewriter } from 'react-simple-typewriter';
 
 export default function Hero() {
+  const langLocale = useRouter().locale;
+
   return (
     <div
       className="grid items-center w-full grid-cols-1 gap-8 mt-32 md:mt-48 lg:grid gap-y-12 lg:grid-cols-2 lg:gap-y-0 justify-items-center"
@@ -24,7 +27,14 @@ export default function Hero() {
         <p className="text-xl lg:w-[30rem] leading-8 italic font-medium">
           &ldquo;To learn is to grow, and to grow is to become a better version of oneself&ldquo;
         </p>
-        <button className="button-custom">Download CV</button>
+        <Link
+          href={langLocale === 'es' ? 'CV-ES.pdf' : 'CV-EN.pdf'}
+          download={true}
+          className="button-custom"
+          target="_blank"
+        >
+          Download CV
+        </Link>
       </div>
       <div className="relative">
         <Image
