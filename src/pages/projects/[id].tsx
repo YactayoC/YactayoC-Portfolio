@@ -19,8 +19,7 @@ export default function ProjectPage() {
         <title>Project | {project.title}</title>
       </Head>
       <main className="relative flex flex-col items-center w-full py-24 sm:py-32 container-section gap-y-16">
-        {/* <h1 className="text-6xl font-bold text-gradient-2">My Projects</h1> */}
-        <div className="flex flex-col-reverse items-center md:grid md:grid-cols-2 gap-y-16 md:gap-x-32">
+        <div className="flex flex-col-reverse items-center lg:grid lg:grid-cols-2 gap-y-16 md:gap-x-32">
           <div className="flex flex-col gap-16">
             <h1 className="text-6xl font-bold text-gradient-2">{project.title}</h1>
             <div className="flex gap-x-8">
@@ -51,7 +50,7 @@ export default function ProjectPage() {
             </div>
           </div>
 
-          <div>
+          <div className="w-full">
             <Project project={project} showLinks={false} dragFree={true} />
           </div>
         </div>

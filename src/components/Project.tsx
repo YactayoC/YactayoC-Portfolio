@@ -18,9 +18,6 @@ export default function Project({ project, showLinks = true, dragFree = false }:
   const emblaOptions = dragFree ? emblaOptionsDrag : emblaOptionsNoDrag;
   const [emblaRef] = useEmblaCarousel(emblaOptions, [Autoplay({ delay: delayRandom, stopOnInteraction: false })]);
 
-  const toBase64 = (str: string) =>
-    typeof window === 'undefined' ? Buffer.from(str).toString('base64') : window.btoa(str);
-
   return (
     <div className="rounded-2xl bg-background_secondary embla">
       <div className="embla__viewport" ref={emblaRef}>
@@ -31,8 +28,7 @@ export default function Project({ project, showLinks = true, dragFree = false }:
                 <Image
                   className="w-full h-full embla__slide__img rounded-xl"
                   src={project?.images[index]}
-                  alt="Image project"
-                  placeholder="blur"
+                  alt={project.title}
                   width={1599}
                   height={899}
                   priority
@@ -41,7 +37,7 @@ export default function Project({ project, showLinks = true, dragFree = false }:
                 <Image
                   className="w-full h-full embla__slide__img rounded-xl"
                   src={project?.images[index]}
-                  alt="Image project"
+                  alt={project.title}
                   width={640}
                   height={360}
                   priority
