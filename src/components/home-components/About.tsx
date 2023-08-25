@@ -14,7 +14,7 @@ export default function About() {
         />
 
         <div className="text-xl font-medium leading-8 text-gray-50 sm:w-[70%]">
-          <p>
+          {/* <p>
             👋 Hello, I am a web developer. I like to make web pages in addition to applying good practices for the
             development of these, I also like to learn new technologies and find different ways to solve some kind of
             problem.
@@ -23,6 +23,18 @@ export default function About() {
           <p>
             👨‍💻 As for my skills, I am responsible, I adapt to changes and I have good communication when working in a
             team.
+          </p> */}
+          <p style={{ textAlign: 'justify' }}>
+            Full Stack Developer with experience in challenging and exciting projects.
+          </p>
+          <br />
+          <p style={{ textAlign: 'justify' }}>
+            Committed to my work and eager to learn, I am oriented to grow professionally in a company that always seeks
+            excellence.
+          </p>
+          <br />
+          <p style={{ textAlign: 'justify' }}>
+            I am interested in applying good programming practices to develop quality solutions.
           </p>
         </div>
         <div></div>

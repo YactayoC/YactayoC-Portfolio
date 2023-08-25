@@ -16,7 +16,8 @@ export default function Hero() {
           <h1 className="text-4xl font-black sm:text-5xl md:text-6xl">Sebastian Yactayo</h1>
           <h3 className="text-3xl font-bold duration-300 sm:text-4xl text-blue-shadow w-fit md:text-4xl text-gradient-1">
             <Typewriter
-              words={['Frontend Developer', 'Backend Developer']}
+              // words={['Frontend Developer', 'Backend Developer']}
+              words={['Desarrollador Web']}
               loop
               cursor
               cursorColor="#305db7"
