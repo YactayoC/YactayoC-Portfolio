@@ -29,7 +29,8 @@ export default function Hero() {
           &ldquo;To learn is to grow, and to grow is to become a better version of oneself&ldquo;
         </p>
         <Link
-          href={langLocale === 'es' ? 'CV-ES.pdf' : 'CV-EN.pdf'}
+          // href={langLocale === 'es' ? 'CV-ES.pdf' : 'CV-EN.pdf'}
+          href={'CV-YACTAYO WEB.pdf'}
           download={true}
           className="button-custom"
           target="_blank"
