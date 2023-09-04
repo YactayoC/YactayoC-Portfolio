@@ -1,10 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import i18n from '@/config/i18next.config';
+import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
 export default function Navbar() {
   const [linkHover, setLinkHover] = useState('Contact');
   const [showMenuMobile, setShowMenuMobile] = useState(false);
+  const { t } = useTranslation();
+  const currentLanguage = i18n.language;
 
   const onClickLink = (e: any) => {
     setLinkHover(e.target.textContent);
@@ -17,6 +21,10 @@ export default function Navbar() {
   const onClickLinkMobile = (e: any) => {
     setLinkHover(e.target.textContent);
     setShowMenuMobile(false);
+  };
+
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
   };
 
   return (
@@ -35,29 +43,51 @@ export default function Navbar() {
           onClick={onClickLink}
           href="#about"
         >
-          About me
+          {t('nav-about-me')}
         </Link>
         <Link
           className={`nav-link ${linkHover === 'Skills' && 'nav-link-active'}`}
           onClick={onClickLink}
           href="#skills"
         >
-          Skills
+          {t('nav-skills')}
         </Link>
         <Link
           className={`nav-link ${linkHover === 'Projects' && 'nav-link-active'}`}
           onClick={onClickLink}
           href="#projects"
         >
-          Projects
+          {t('nav-projects')}
         </Link>
         <Link
           className={`nav-link ${linkHover === 'Contact' && 'nav-link-active'}`}
           onClick={onClickLink}
           href="#contact"
         >
-          Contact
+          {t('nav-contact')}
         </Link>
+        <div className="flex ml-8 gap-x-4">
+          <Image
+            className={`border-2 border-white rounded-full cursor-pointer transition-all duration-300 ${
+              currentLanguage === 'en' && 'opacity-50'
+            }`}
+            onClick={() => changeLanguage('es')}
+            src="/assets/icons/spain-translate.png"
+            alt="en"
+            width={40}
+            height={40}
+          />
+          <Image
+            className={`border-2 border-white rounded-full cursor-pointer transition-all duration-300 ${
+              currentLanguage === 'es' && 'opacity-50'
+            }`}
+            onClick={() => changeLanguage('en')}
+            src="/assets/icons/usa-translate.png"
+            alt="en"
+            width={40}
+            height={40}
+          />
+        </div>
       </div>
 
       {/* Hamburguer */}
@@ -99,6 +129,28 @@ export default function Navbar() {
         >
           Contact
         </Link>
+        <div className="flex gap-x-4">
+          <Image
+            className={`border-2 border-white rounded-full cursor-pointer transition-all duration-300 ${
+              currentLanguage === 'en' && 'opacity-50'
+            }`}
+            onClick={() => changeLanguage('es')}
+            src="/assets/icons/spain-translate.png"
+            alt="en"
+            width={40}
+            height={40}
+          />
+          <Image
+            className={`border-2 border-white rounded-full cursor-pointer transition-all duration-300 ${
+              currentLanguage === 'es' && 'opacity-50'
+            }`}
+            onClick={() => changeLanguage('en')}
+            src="/assets/icons/usa-translate.png"
+            alt="en"
+            width={40}
+            height={40}
+          />
+        </div>
       </div>
     </nav>
   );

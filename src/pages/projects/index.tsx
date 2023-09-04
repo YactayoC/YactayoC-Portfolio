@@ -2,29 +2,31 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChangeEvent, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Project } from '@/components';
 import { dataProjects } from '@/data';
 
 export default function ProjectsPage() {
+  const { t } = useTranslation();
   const [projectCategory, setProjectCategory] = useState('all');
 
   return (
     <>
       <Head>
-        <title>Portfolio | Projects</title>
+        <title>Portfolio | {t('projects-head')}</title>
       </Head>
       <main className="relative flex flex-col items-center w-full py-24 sm:py-16 container-section gap-y-16">
-        <h1 className="text-6xl font-bold text-gradient-2">My Projects</h1>
+        <h1 className="text-6xl font-bold text-gradient-2">{t('projects')}</h1>
 
         <form>
           <select
             className="input-select-custom w-fit"
             onChange={(e: ChangeEvent<HTMLSelectElement>) => setProjectCategory(e.target.value)}
           >
-            <option value="all">All my projects</option>
-            <option value="external">External APIS</option>
-            <option value="own">Own APIS</option>
+            <option value="all">{t('projects-all')}</option>
+            <option value="external">{t('projects-external')}</option>
+            <option value="own">{t('projects-own')}</option>
           </select>
         </form>
 

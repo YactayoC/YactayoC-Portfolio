@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { dataSkills } from '@/data';
 import Skill from '../Skill';
 
 export default function Skills() {
+  const { t } = useTranslation();
   const [skillsCategory, setSkillsCategory] = useState({ index: 0, category: 'frontend' });
 
   const onClickCategory = (index: number, category: string) => {
@@ -12,10 +14,10 @@ export default function Skills() {
 
   return (
     <section className="flex flex-col items-center container-section mt-36 gap-y-16" id="skills">
-      <h2 className="text-6xl font-bold text-gradient-2">My Skills</h2>
+      <h2 className="text-6xl font-bold text-center text-gradient-2">{t('home-skills')}</h2>
 
       {/* Skills */}
-      <div className="flex flex-col w-full m-auto font-medium gap-y-16 lg:w-[70%]">
+      <div className="flex flex-col w-full m-auto font-medium gap-y-16 lg:w-[70%] ">
         <div className="flex justify-between text-gray-50">
           <div
             className={`tab ${skillsCategory.index === 0 && 'tab-active'}`}
@@ -33,13 +35,13 @@ export default function Skills() {
             className={`tab ${skillsCategory.index === 2 && 'tab-active'}`}
             onClick={() => onClickCategory(2, 'database')}
           >
-            Database
+            {t('home-skills-database')}
           </div>
           <div
             className={`tab ${skillsCategory.index === 3 && 'tab-active'}`}
             onClick={() => onClickCategory(3, 'others')}
           >
-            Others
+            {t('home-skills-others')}
           </div>
         </div>
 

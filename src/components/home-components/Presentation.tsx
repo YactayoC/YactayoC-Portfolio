@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
 import { Typewriter } from 'react-simple-typewriter';
 
 export default function Hero() {
-  const langLocale = useRouter().locale;
+  const { t } = useTranslation();
 
   return (
     <div
@@ -17,7 +17,7 @@ export default function Hero() {
           <h3 className="text-3xl font-bold duration-300 sm:text-4xl text-blue-shadow w-fit md:text-4xl text-gradient-1">
             <Typewriter
               // words={['Frontend Developer', 'Backend Developer']}
-              words={['Web developer']}
+              words={[`${t('home-dev')}`]}
               loop
               cursor
               cursorColor="#305db7"
@@ -25,9 +25,7 @@ export default function Hero() {
             />
           </h3>
         </div>
-        <p className="text-xl lg:w-[30rem] leading-8 italic font-medium">
-          &ldquo;To learn is to grow, and to grow is to become a better version of oneself&ldquo;
-        </p>
+        <p className="text-xl lg:w-[30rem] leading-8 italic font-medium">&ldquo;{t('home-frase')}&ldquo;</p>
         <Link
           // href={langLocale === 'es' ? 'CV-ES.pdf' : 'CV-EN.pdf'}
           href={'CV-YACTAYO WEB.pdf'}
@@ -35,7 +33,7 @@ export default function Hero() {
           className="button-custom"
           target="_blank"
         >
-          Download CV
+          {t('home-cv')}
         </Link>
       </div>
       <div className="relative">

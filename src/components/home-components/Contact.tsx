@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import { ToastContainer } from 'react-toastify';
+import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import { isEmail, isName } from '@/utils/validations';
-import { useForm } from 'react-hook-form';
 import { notify, sendEmail } from '@/utils';
 
 interface DataForm {
@@ -12,6 +13,7 @@ interface DataForm {
 }
 
 export default function Contact() {
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -44,7 +46,7 @@ export default function Contact() {
         draggable
         pauseOnHover
       />
-      <h2 className="text-6xl font-bold text-gradient-2">Contact Me</h2>
+      <h2 className="text-6xl font-bold text-gradient-2">{t('home-contact')}</h2>
       <div className="flex flex-col items-center justify-center w-full p-6 gap-y-20 lg:flex-row lg:gap-x-20">
         <Image
           className="hidden lg:block w-[537px] h-[464px]"
@@ -70,7 +72,7 @@ export default function Contact() {
               })}
             />
             <label htmlFor="fullname" className="label-input">
-              Fullname
+              {t('home-contact-input-name')}
             </label>
             {errors.fullname && <p className="absolute text-red-500 -bottom-6">{errors.fullname.message}</p>}
           </div>
@@ -86,7 +88,7 @@ export default function Contact() {
               })}
             />
             <label htmlFor="email" className="label-input">
-              Email
+              {t('home-contact-input-email')}
             </label>
             {errors.email && <p className="absolute text-red-500 -bottom-6">{errors.email.message}</p>}
           </div>
@@ -102,11 +104,11 @@ export default function Contact() {
               })}
             ></textarea>
             <label htmlFor="message" className="label-input">
-              Message
+              {t('home-contact-input-message')}
             </label>
             {errors.message && <p className="absolute text-red-500 -bottom-6">{errors.message.message}</p>}
           </div>
-          <button className="w-full button-custom">Send mail</button>
+          <button className="w-full button-custom">{t('home-contact-send')}</button>
         </form>
       </div>
     </section>
