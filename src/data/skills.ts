@@ -42,8 +42,20 @@ export const dataSkills: Skill[] = [
     category: 'frontend',
   },
   {
+    name: 'Angular',
+    image:
+      'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701493699/portfolio/Icons/waiifbv87j7kv4z0aq12.png',
+    category: 'frontend',
+  },
+  {
     name: 'TailwindCSS',
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1664292359/portfolio/Icons/tailwind_fuihra.png',
+    category: 'frontend',
+  },
+  {
+    name: 'Material UI',
+    image:
+      'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701493934/portfolio/Icons/llro2ags8dh2d1zouqku.png',
     category: 'frontend',
   },
   {
@@ -94,6 +106,18 @@ export const dataSkills: Skill[] = [
     category: 'backend',
   },
   {
+    name: 'Python',
+    image:
+      'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701494071/portfolio/Icons/tlkffhmnr6gpxuwplhis.png',
+    category: 'backend',
+  },
+  {
+    name: 'Java',
+    image:
+      'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701494068/portfolio/Icons/rj7kfpgeoxlqquagpxn1.png',
+    category: 'backend',
+  },
+  {
     name: 'MongoDB',
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659640591/portfolio/Icons/mongodb_xxaho9.png',
     category: 'database',
@@ -101,6 +125,12 @@ export const dataSkills: Skill[] = [
   {
     name: 'MySQL',
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659640450/portfolio/Icons/mysql_qtcblp.png',
+    category: 'database',
+  },
+  {
+    name: 'PostgreSQL',
+    image:
+      'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701493811/portfolio/Icons/z6u09yzkhgmqmustwgkn.png',
     category: 'database',
   },
   {
