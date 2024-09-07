@@ -28,7 +28,7 @@ export default function Hero() {
         <p className="text-xl lg:w-[30rem] leading-8 italic font-medium">&ldquo;{t('home-frase')}&ldquo;</p>
         <Link
           // href={langLocale === 'es' ? 'CV-ES.pdf' : 'CV-EN.pdf'}
-          href={'CV-YACTAYO WEB.pdf'}
+          href={'Sebastian_Yactayo-Desarrollador_Frontend.pdf'}
           download={true}
           className="button-custom"
           target="_blank"

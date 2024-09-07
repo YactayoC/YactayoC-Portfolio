@@ -58,12 +58,12 @@ export const dataSkills: Skill[] = [
       'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701493934/portfolio/Icons/llro2ags8dh2d1zouqku.png',
     category: 'frontend',
   },
-  {
-    name: 'Styled C.',
-    image:
-      'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1660697248/portfolio/Icons/styled-components_q4zash.png',
-    category: 'frontend',
-  },
+  // {
+  //   name: 'Styled C.',
+  //   image:
+  //     'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1660697248/portfolio/Icons/styled-components_q4zash.png',
+  //   category: 'frontend',
+  // },
 
   {
     name: 'Jotai',
@@ -75,21 +75,21 @@ export const dataSkills: Skill[] = [
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1660184946/portfolio/Icons/redux_reawoa.png',
     category: 'frontend',
   },
-  {
-    name: 'VueX',
-    image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1680794751/portfolio/Icons/vuex_1_qnmuqp.png',
-    category: 'frontend',
-  },
-  {
-    name: 'FastAPI',
-    image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659641350/portfolio/Icons/fastAPI_if2s09.png',
-    category: 'backend',
-  },
-  {
-    name: 'Flask',
-    image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659641072/portfolio/Icons/flask_uqz8wj.png',
-    category: 'backend',
-  },
+  // {
+  //   name: 'VueX',
+  //   image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1680794751/portfolio/Icons/vuex_1_qnmuqp.png',
+  //   category: 'frontend',
+  // },
+  // {
+  //   name: 'FastAPI',
+  //   image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659641350/portfolio/Icons/fastAPI_if2s09.png',
+  //   category: 'backend',
+  // },
+  // {
+  //   name: 'Flask',
+  //   image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659641072/portfolio/Icons/flask_uqz8wj.png',
+  //   category: 'backend',
+  // },
   {
     name: 'NodeJS',
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659633340/portfolio/Icons/node_hasxir.png',
@@ -105,18 +105,18 @@ export const dataSkills: Skill[] = [
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1680794091/portfolio/Icons/nestjs.png',
     category: 'backend',
   },
-  {
-    name: 'Python',
-    image:
-      'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701494071/portfolio/Icons/tlkffhmnr6gpxuwplhis.png',
-    category: 'backend',
-  },
-  {
-    name: 'Java',
-    image:
-      'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701494068/portfolio/Icons/rj7kfpgeoxlqquagpxn1.png',
-    category: 'backend',
-  },
+  // {
+  //   name: 'Python',
+  //   image:
+  //     'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701494071/portfolio/Icons/tlkffhmnr6gpxuwplhis.png',
+  //   category: 'backend',
+  // },
+  // {
+  //   name: 'Java',
+  //   image:
+  //     'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1701494068/portfolio/Icons/rj7kfpgeoxlqquagpxn1.png',
+  //   category: 'backend',
+  // },
   {
     name: 'MongoDB',
     image: 'https://res.cloudinary.com/sebas-2001-yac/image/upload/v1659640591/portfolio/Icons/mongodb_xxaho9.png',

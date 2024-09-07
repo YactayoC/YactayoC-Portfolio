@@ -11,11 +11,11 @@ export default function Projects() {
       <h2 className="text-6xl font-bold text-center text-gradient-2">{t('home-projects')}</h2>
 
       <div className="grid justify-center w-full grid-cols-1 m-auto font-medium md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-16">
-        {dataProjects
+        {/* {dataProjects
           .filter((project) => project.salient)
           .map((project) => (
             <Project key={project.id} project={project}></Project>
-          ))}
+          ))} */}
       </div>
 
       <Link href="./projects">

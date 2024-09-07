@@ -53,19 +53,26 @@ export default function Navbar() {
           {t('nav-skills')}
         </Link>
         <Link
+          className={`nav-link ${linkHover === 'Skills' && 'nav-link-active'}`}
+          onClick={onClickLink}
+          href="#skills"
+        >
+          {t('nav-experience')}
+        </Link>
+        {/* <Link
           className={`nav-link ${linkHover === 'Projects' && 'nav-link-active'}`}
           onClick={onClickLink}
           href="#projects"
         >
           {t('nav-projects')}
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           className={`nav-link ${linkHover === 'Contact' && 'nav-link-active'}`}
           onClick={onClickLink}
           href="#contact"
         >
           {t('nav-contact')}
-        </Link>
+        </Link> */}
         <div className="flex ml-8 gap-x-4">
           <Image
             className={`border-2 border-white rounded-full cursor-pointer transition-all duration-300 ${
@@ -106,29 +113,36 @@ export default function Navbar() {
           onClick={onClickLinkMobile}
           href="#about"
         >
-          About me
+          {t('nav-about-me')}
         </Link>
         <Link
           className={`nav-link-mobile ${linkHover === 'Skills' && 'nav-link-active'}`}
           onClick={onClickLinkMobile}
           href="#skills"
         >
-          Skills
+          {t('nav-skills')}
         </Link>
         <Link
+          className={`nav-link-mobile ${linkHover === 'Experiences' && 'nav-link-active'}`}
+          onClick={onClickLinkMobile}
+          href="#experiences"
+        >
+          {t('nav-experience')}
+        </Link>
+        {/* <Link
           className={`nav-link-mobile ${linkHover === 'Projects' && 'nav-link-active'}`}
           onClick={onClickLinkMobile}
           href="#projects"
         >
           Projects
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           className={`nav-link-mobile ${linkHover === 'Contact' && 'nav-link-active'}`}
           onClick={onClickLinkMobile}
           href="#contact"
         >
           Contact
-        </Link>
+        </Link> */}
         <div className="flex gap-x-4">
           <Image
             className={`border-2 border-white rounded-full cursor-pointer transition-all duration-300 ${
